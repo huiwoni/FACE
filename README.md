@@ -9,7 +9,7 @@ Please follow the environment setup instructions in the [official StyleGAN3 repo
 The experiments were conducted using:
 
 - GPU: NVIDIA RTX 3090
-- CUDA: 11.8
+- CUDA: 12.8
 
 ---
 
