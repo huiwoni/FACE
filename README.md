@@ -13,13 +13,12 @@ The implementation follows the official StyleGAN3 framework.
 ### Hardware
 
 * GPU: NVIDIA RTX 3090
-* CUDA: 11.8
+* CUDA: 12.8
 
 ### Software
 
 * Python 3.8
 * PyTorch
-* StyleGAN3
 
 ---
 
