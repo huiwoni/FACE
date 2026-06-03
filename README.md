@@ -17,7 +17,7 @@ The implementation follows the official StyleGAN3 framework.
 
 ### Software
 
-* Python 3.8
+* Python 3.10.20
 * PyTorch
 
 ---
