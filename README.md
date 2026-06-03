@@ -102,7 +102,7 @@ The model is initialized from the official StyleGAN3-R FFHQ-U pretrained checkpo
 
 The pretrained model can be downloaded from:
 
-* [Pretrained Model Download (Google Drive)](https://drive.google.com/drive/folders/1ZDQSmP5WOmhKGnm3ZqxBMsGN9nXp7udN?utm_source=chatgpt.com)
+* [Pretrained Model Download (Google Drive)]([https://drive.google.com/drive/folders/1ZDQSmP5WOmhKGnm3ZqxBMsGN9nXp7udN?utm_source=chatgpt.com](https://catalog.ngc.nvidia.com/orgs/nvidia/teams/research/models/stylegan3/files?version=1))
 
 Expected checkpoint:
 
