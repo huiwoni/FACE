@@ -2,19 +2,9 @@
 
 ## Overview
 
-This repository contains the training and inference code used for the AI 518 Deep Generative Models final project.
+This repository contains the training and inference code used for the Deep Generative Models final project.
 
 The project fine-tunes **StyleGAN3-R** on face images extracted from the CelebV-HQ video dataset and evaluates the effects of frame sampling strategies and training length on image generation quality.
-
-The best model was obtained using a **three-frame sampling strategy** and achieved:
-
-| Metric | Value   |
-| ------ | ------- |
-| FID    | 29.2685 |
-| KID    | 0.0023  |
-| TOPPR  | 0.8705  |
-
----
 
 ## Environment
 
