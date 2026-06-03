@@ -10,7 +10,7 @@ The project fine-tunes **StyleGAN3-R** on face images extracted from the CelebV-
 
 This project is based on the official StyleGAN3 implementation:
 
-* [Official StyleGAN3 Repository](https://github.com/NVlabs/stylegan3?utm_source=chatgpt.com)
+* [StyleGAN3 Model Zoo](https://catalog.ngc.nvidia.com/orgs/nvidia/teams/research/models/stylegan3/files?version=1)
 
 Clone the repository:
 
