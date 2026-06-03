@@ -4,37 +4,24 @@
 
 This project is based on the official StyleGAN3 implementation.
 
-* [StyleGAN3 Official Repository](https://github.com/NVlabs/stylegan3)
-* [NVIDIA StyleGAN3 Model Zoo](https://catalog.ngc.nvidia.com/orgs/nvidia/teams/research/models/stylegan3/files?version=1)
+Please follow the environment setup instructions in the [official StyleGAN3 repository](https://github.com/NVlabs/stylegan3).
 
-### Hardware
+The experiments were conducted using:
 
-* NVIDIA RTX 3090
-* CUDA 11.8
-
-### Installation
-
-```bash
-git clone https://github.com/NVlabs/stylegan3.git
-cd stylegan3
-
-conda create -n stylegan3 python=3.8 -y
-conda activate stylegan3
-
-pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
-
-pip install click requests tqdm pyspng ninja imageio imageio-ffmpeg scipy psutil
-```
+- GPU: NVIDIA RTX 3090
+- CUDA: 11.8
 
 ---
 
-## Dataset Preparation
+## Data Preparation
 
 Raw CelebV-HQ videos should be placed in:
 
 ```text
 datasets/celebvhq_raw
 ```
+
+The StyleGAN3 dataset zip file is generated using `dataset_tool.py`.
 
 ### One Frame per Video
 
@@ -47,9 +34,9 @@ python dataset_tool.py \
     --max-frames-per-video=1
 ```
 
-### Three Frames per Video (Main Experiment)
+### Three Frames per Video
 
-Frames are sampled at approximately 25%, 50%, and 75% of the video duration.
+For the main experiment, three frames were extracted from each video at 25%, 50%, and 75% of the video duration.
 
 ```bash
 python dataset_tool.py \
@@ -64,11 +51,11 @@ python dataset_tool.py \
 
 ## Training
 
-Download the pretrained StyleGAN3-R checkpoint from:
+The model was initialized from the official StyleGAN3-R FFHQ-U pretrained checkpoint.
 
-* [NVIDIA StyleGAN3 Model Zoo](https://catalog.ngc.nvidia.com/orgs/nvidia/teams/research/models/stylegan3/files?version=1)
+The pretrained checkpoint can be downloaded from the [NVIDIA StyleGAN3 Model Zoo](https://catalog.ngc.nvidia.com/orgs/nvidia/teams/research/models/stylegan3/files?version=1).
 
-Checkpoint:
+Checkpoint used for fine-tuning:
 
 ```text
 stylegan3-r-ffhqu-256x256.pkl
@@ -99,19 +86,17 @@ CUDA_VISIBLE_DEVICES=0 python train.py \
 
 ---
 
-## Testing / Image Generation
+## Test / Image Generation
 
-Download the trained checkpoint from:
+The trained checkpoint can be downloaded from [Project Checkpoints](https://drive.google.com/drive/folders/1ZDQSmP5WOmhKGnm3ZqxBMsGN9nXp7udN).
 
-* [Project Checkpoints](https://drive.google.com/drive/folders/1ZDQSmP5WOmhKGnm3ZqxBMsGN9nXp7udN)
-
-Checkpoint:
+Checkpoint used for image generation:
 
 ```text
 network-snapshot-005000.pkl
 ```
 
-Generate images:
+Image generation command:
 
 ```bash
 python gen_images.py \
@@ -120,18 +105,4 @@ python gen_images.py \
     --trunc=1 \
     --noise-mode=const \
     --outdir=out
-```
-
-### Reproducibility
-
-Training seed:
-
-```bash
---seed=0
-```
-
-Generation seeds:
-
-```bash
---seeds=0-999
 ```
