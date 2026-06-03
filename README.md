@@ -10,16 +10,14 @@ The project fine-tunes **StyleGAN3-R** on face images extracted from the CelebV-
 
 The implementation follows the official StyleGAN3 framework.
 
-### Hardware
+## Environment Setup
 
 * GPU: NVIDIA RTX 3090
 * CUDA: 12.8
 
-### Software
+This project is based on the official StyleGAN3 implementation:
 
-* Python 3.10.20
-* PyTorch
-
+https://github.com/NVlabs/stylegan3
 ---
 
 ## Dataset Preparation
